@@ -1,0 +1,60 @@
+image: node:latest
+
+stages:
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+deploy-staging:
+  image: docker:19.03.1
+  stage: deploy
+  services:
+    - docker:19.03.1-dind
+  environment:
+    name: staging
+  before_script:
+    - export DOCKER_REGISTRY_USER=$CI_REGISTRY_USER
+    - export DOCKER_REGISTRY_PASSWORD=$CI_REGISTRY_PASSWORD
+    - export DOCKER_REGISTRY_URL=$CI_REGISTRY
+    - export COMMIT_HASH=$CI_COMMIT_SHA
+    - export IMAGE_NAME_WITH_REGISTRY_PREFIX=$CI_REGISTRY_IMAGE
+    - docker login -u "$DOCKER_REGISTRY_USER" -p "$DOCKER_REGISTRY_PASSWORD" $DOCKER_REGISTRY_URL
+  script:
+    - echo "Building Docker Image..."
+    - export CONTAINER_FULL_IMAGE_NAME_WITH_TAG=$IMAGE_NAME_WITH_REGISTRY_PREFIX/voices-by-asssured-react:$COMMIT_HASH
+    - docker build -f ./Dockerfile --pull -t voices-by-asssured-react-image .
+    - docker tag voices-by-asssured-react-image "$CONTAINER_FULL_IMAGE_NAME_WITH_TAG"
+    - docker push "$CONTAINER_FULL_IMAGE_NAME_WITH_TAG"
+    - echo $CONTAINER_FULL_IMAGE_NAME_WITH_TAG
+    - echo "Deploying on CapRover..."
+    - docker run caprover/cli-caprover:v2.1.1 caprover deploy --caproverUrl $CAPROVER_URL --caproverPassword $CAPROVER_PASSWORD --caproverApp $CAPROVER_APP --imageName $CONTAINER_FULL_IMAGE_NAME_WITH_TAG
+  only:
+    - staging
+
+deploy-production:
+  image: docker:19.03.1
+  stage: deploy
+  services:
+    - docker:19.03.1-dind
+  environment:
+    name: production
+  before_script:
+    - export DOCKER_REGISTRY_USER=$CI_REGISTRY_USER
+    - export DOCKER_REGISTRY_PASSWORD=$CI_REGISTRY_PASSWORD
+    - export DOCKER_REGISTRY_URL=$CI_REGISTRY
+    - export COMMIT_HASH=$CI_COMMIT_SHA
+    - export IMAGE_NAME_WITH_REGISTRY_PREFIX=$CI_REGISTRY_IMAGE
+    - docker login -u "$DOCKER_REGISTRY_USER" -p "$DOCKER_REGISTRY_PASSWORD" $DOCKER_REGISTRY_URL
+  script:
+    - echo "Building Docker Image..."
+    - export CONTAINER_FULL_IMAGE_NAME_WITH_TAG=$IMAGE_NAME_WITH_REGISTRY_PREFIX/voices-by-asssured-prod:$COMMIT_HASH
+    - docker build -f ./Dockerfile --pull -t voices-by-asssured-prod-image .
+    - docker tag voices-by-asssured-prod-image "$CONTAINER_FULL_IMAGE_NAME_WITH_TAG"
+    - docker push "$CONTAINER_FULL_IMAGE_NAME_WITH_TAG"
+    - echo $CONTAINER_FULL_IMAGE_NAME_WITH_TAG
+    - echo "Deploying on CapRover..."
+    - docker run caprover/cli-caprover:v2.1.1 caprover deploy --caproverUrl $CAPROVER_URL --caproverPassword $CAPROVER_PASSWORD --caproverApp $CAPROVER_APP --imageName $CONTAINER_FULL_IMAGE_NAME_WITH_TAG
+  only:
+    - main

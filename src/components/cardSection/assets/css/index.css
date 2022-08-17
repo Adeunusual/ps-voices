@@ -1,0 +1,415 @@
+/************************ candidates */
+.card-wrapper {
+    max-width: 1300px;
+    padding: 24px 0;
+    margin: 0 auto;
+    font-family: var(--GT-Walsheim);
+}
+
+.card-inner-w {
+    padding: 0 15px;
+}
+
+.card-wrapper .heading h2 {
+    color: var(--color-gray-10);
+    font-size: 28px;
+    font-weight: var(--font-weight-normalBold);
+    line-height: 1;
+    letter-spacing: -0.75;
+}
+
+#light .card-wrapper .heading h2 {
+    color: var(--color-gray-100);
+}
+
+.cardComponent {
+    display: grid;
+    grid-gap: 8px 0;
+    margin-top: 24px;
+}
+
+.card-border {
+    padding: 16px;
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--btn-shadow-color);
+
+    display: grid;
+    grid-gap: 16px;
+}
+
+#light .card-border {
+    border: 1px solid var(--color-gray-30);
+
+}
+
+.candidateDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.candidateDetails div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-gray-10);
+}
+
+#light .candidateDetails div {
+    color: var(--color-gray-100);
+}
+
+.candidate-imgWrapper {
+    position: relative;
+    margin-inline-end: 8px;
+}
+
+
+.candidate-imgWrapper .icon {
+    font-size: 10px;
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    color: var(--color-info) !important;
+}
+
+.candidateDetails img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.candidateDetails .candidate-name {
+    font-size: 0.875rem;
+}
+
+.candidateDetails .icon-w {
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.candidateDetails .icon {
+    font-size: 11px;
+    color: var(--color-gray-10);
+}
+
+.card-border .card {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    border-radius: var(--border-radius-small);
+}
+
+
+.card-detailsImg {
+    width: 100%;
+    border-radius: var(--border-radius-small);
+}
+
+.card-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.styleParent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 1080px;
+    width: 1080px;
+    z-index: -1000000;
+    /* visibility: hidden; */
+    overflow: auto;
+    pointer-events: none;
+}
+
+.cardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cardImg {
+    display: none;
+}
+
+#card.resize {
+    position: relative;
+}
+
+#card.resize .cardImg {
+    display: block;
+    position: absolute;
+    border: 8px solid var(--white);
+}
+
+.peterObiCard0 #card.resize .cardImg,
+.peterObiCard5 #card.resize .cardImg,
+.peterObiCard9 #card.resize .cardImg {
+    display: none;
+}
+
+/* twitter Handle */
+.twitterHandle {
+    position: absolute;
+    /* width: 194px;
+    height: 29px; */
+    font-size: 10px;
+    font-weight: 800;
+    color: #FFFFFF;
+    font-family: var(--NeueMachina);
+}
+
+#card.resize .twitterHandle .displayName,
+.twitterHandle .hiddenName {
+    display: none;
+}
+
+#card.resize .twitterHandle .hiddenName {
+    display: block;
+    font-size: 36px;
+    color: #FFFFFF;
+    font-family: var(--NeueMachina);
+}
+
+/* Name */
+.name {
+    /* display: none; */
+}
+
+.name {
+    position: absolute;
+    text-align: center;
+    width: 472px;
+    height: 29px;
+    font-weight: 800;
+    color: #FFFFFF;
+    font-family: var(--NeueMachina);
+}
+
+#card.resize .name .hiddenName {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    font-size: 59px;
+    color: #FFFFFF;
+    font-family: var(--NeueMachina);
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: -0.03em;
+}
+
+/* pObi Avatar 1*/
+.peterObiCard0 #card.resize .twitterHandle {
+    top: 122.76px;
+    left: 166px;
+}
+
+.peterObiCard0 .twitterHandle {
+    top: 10.5%;
+    left: 16%;
+}
+
+@media only screen and (max-width:640px) {
+    .peterObiCard0 .twitterHandle {
+        top: 11.5%;
+    }
+}
+
+/* pObi Avatar 2*/
+.peterObiCard1 .cardImg {
+    border-radius: 50%;
+    width: 293px;
+    height: 293px;
+    top: 471px;
+    left: 172px;
+}
+
+/* pObi Avatar 3*/
+.peterObiCard2 .cardImg {
+    border-radius: 50%;
+    width: 211px;
+    height: 211px;
+    top: 222.38px;
+    left: 436.2px;
+    /* display: none; */
+}
+
+/* pObi Avatar 4*/
+.peterObiCard3 .cardImg {
+    border-radius: 50%;
+    width: 145px;
+    height: 145px;
+    top: 571px;
+    left: 591px;
+}
+
+/* pObi Avatar 5*/
+.peterObiCard4 .cardImg {
+    border-radius: 50%;
+    width: 155px;
+    height: 155px;
+    top: 154px;
+    left: 386px;
+}
+
+/* pObi Avatar 6*/
+.peterObiCard5 #card.resize .twitterHandle {
+    top: 90.9%;
+}
+
+.peterObiCard5 .twitterHandle {
+    top: 91.5%;
+    width: auto;
+    height: auto;
+}
+
+@media only screen and (min-width:240px) {
+    .peterObiCard5 .twitterHandle {
+        top: 89%;
+
+    }
+}
+
+@media only screen and (min-width:340px) {
+    .peterObiCard5 .twitterHandle {
+        top: 91%;
+        right: 17%;
+    }
+}
+
+@media only screen and (min-width:640px) {
+    .peterObiCard5 .twitterHandle {
+        top: 88%;
+    }
+}
+
+@media only screen and (min-width:960px) {
+    .peterObiCard5 .twitterHandle {
+        top: 89.9%;
+        right: 17%;
+    }
+}
+
+/* pObi Avatar 7*/
+.peterObiCard6 .cardImg {
+    border-radius: 50%;
+    width: 239px;
+    height: 239px;
+    top: 683px;
+    left: 257px;
+}
+
+/* pObi Avatar 8*/
+.peterObiCard7 .cardImg {
+    border-radius: 50%;
+    width: 391px;
+    height: 391px;
+    top: 319px;
+    left: 351px;
+}
+
+/* pObi Avatar 9*/
+.peterObiCard8 .cardImg {
+    border-radius: 50%;
+    width: 391px;
+    height: 391px;
+    top: 319px;
+    left: 351px;
+}
+
+/* pObi Avatar 10*/
+
+
+#card.resize .name .displayName,
+.name .hiddenName {
+    display: none;
+}
+
+.peterObiCard9 #card.resize .name {
+    display: block;
+    top: 883.76px;
+    text-align: center
+}
+
+.peterObiCard9 .name {
+    top: 81.5%;
+    bottom: 19.5%;
+    font-size: 3vw;
+}
+
+@media only screen and (min-width:640px) {
+    .peterObiCard9 .name {
+        top: 81.75%;
+        bottom: 19.5%;
+        font-size: 0.9vw;
+    }
+}
+
+@media only screen and (min-width:960px) {
+    .peterObiCard9 .name {
+        top: 80.75%;
+        bottom: 19.5%;
+    }
+}
+
+/* pObi Avatar 11*/
+.peterObiCard10 .cardImg {
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    top: 407px;
+    left: 400px;
+}
+
+/* pObi Avatar 12*/
+.peterObiCard11 .cardImg {
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    top: 407px;
+    left: 400px;
+}
+
+/* ------------------------------------------------------ */
+/* @media */
+@media only screen and (min-width:640px) {
+    .card-inner-w {
+        padding: 0 30px;
+    }
+
+    .cardComponent {
+        grid-gap: 8px 8px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width:960px) {
+    .card-wrapper {
+        max-width: 1300px;
+        padding: 48px 0 80px 0;
+        margin: 0 auto;
+        font-family: var(--GT-Walsheim);
+    }
+
+    .card-inner-w {
+        padding: 0 40px;
+    }
+
+    .cardComponent {
+        grid-gap: 24px 24px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+/* /@media */
