@@ -155,7 +155,7 @@ const Card = () => {
                                 {dataGotten.twitterHandle && <p className='hiddenName'>{cardTxtInput.twitterHandle} </p>}
                             </div>
                             <div className="name">
-                                {dataGotten.name && <p className="displayName">ANIKE ADELEKE</p>}
+                                {dataGotten.name && <p className="displayName">ANITA ADELEKE</p>}
                                 {dataGotten.name && <p className='hiddenName'>{cardTxtInput.name} </p>}
                             </div>
                         </div>
