@@ -7,12 +7,13 @@ import obi2 from '../assets/images/OBI2.jpg';
 import obi3 from '../assets/images/OBI3.jpg';
 import obi4 from '../assets/images/OBI4.jpg';
 import obi5 from '../assets/images/OBI5.jpg';
-import obi6 from '../assets/images/OBI6.jpg';
-import obi7 from '../assets/images/OBI7.jpg';
 import obi8 from '../assets/images/OBI8.jpg';
 import obi9 from '../assets/images/OBI9.jpg';
 import obi10 from '../assets/images/OBI10.jpg';
+import obi11 from '../assets/images/OBI11.png';
+import obi12 from '../assets/images/OBI12.png';
 import voteNijacard from '../assets/images/vNaijaCard.jpg';
+
 
 
 export const data = [
@@ -79,16 +80,18 @@ export const data = [
         className: 'peterObiCard7',
         candidateImg: PetrObi,
         candidateName: 'Peter Obi',
-        card: obi6,
-        needImg: true
+        card: obi11,
+        needImg: true,
+        name: true
     },
     {
         cardId: 8,
         className: 'peterObiCard8',
         candidateImg: PetrObi,
         candidateName: 'Peter Obi',
-        card: obi7,
-        needImg: true
+        card: obi12,
+        needImg: true,
+        name: true
     },
     {
         cardId: 9,

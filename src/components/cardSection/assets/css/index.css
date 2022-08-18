@@ -103,7 +103,6 @@
     border-radius: var(--border-radius-small);
 }
 
-
 .card-detailsImg {
     width: 100%;
     border-radius: var(--border-radius-small);
@@ -184,7 +183,6 @@
 
 .name {
     position: absolute;
-    text-align: center;
     width: 100%;
     height: 29px;
     font-weight: 800;
@@ -197,12 +195,12 @@
     position: absolute;
     width: 100%;
     height: 48px;
-    font-size: 59px;
+    text-transform: uppercase;
     color: #FFFFFF;
-    font-family: var(--NeueMachina);
     font-weight: 800;
     line-height: 48px;
     letter-spacing: -0.03em;
+    font-family: var(--NeueMachina);
 }
 
 /* pObi Avatar 1*/
@@ -227,8 +225,8 @@
     border-radius: 50%;
     width: 293px;
     height: 293px;
-    top: 471px;
-    left: 172px;
+    top: 461px;
+    left: 167px;
 }
 
 /* pObi Avatar 3*/
@@ -307,26 +305,135 @@
 }
 
 /* pObi Avatar 8*/
+
+.peterObiCard7 .card {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    position: relative;
+    border-radius: var(--border-radius-small);
+}
+
 .peterObiCard7 .cardImg {
-    border-radius: 50%;
-    width: 391px;
-    height: 391px;
-    top: 319px;
-    left: 351px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    display: block;
+    border-radius: var(--border-radius-small);
+}
+
+.peterObiCard7 .cardImg img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    /* display: none; */
+    overflow: hidden;
+    border-radius: var(--border-radius-small);
+}
+
+/* name*/
+.peterObiCard7 .name {
+    top: 81% !important;
+    margin-left: 4.4%;
+    font-size: 5vw;
+}
+
+.peterObiCard7 #card.resize .name .hiddenName {
+    display: block;
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    line-height: 48px;
+    height: 48px;
+    font-size: 75.37px;
+    text-transform: uppercase;
+}
+
+
+@media only screen and (min-width:640px) {
+    .peterObiCard7 .name {
+        top: 79% !important;
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width:960px) {
+    .peterObiCard7 .name {
+        top: 79.1% !important;
+        font-size: 1.3vw;
+    }
 }
 
 /* pObi Avatar 9*/
+.peterObiCard8 .card {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    position: relative;
+    border-radius: var(--border-radius-small);
+}
+
 .peterObiCard8 .cardImg {
-    border-radius: 50%;
-    width: 391px;
-    height: 391px;
-    top: 319px;
-    left: 351px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    display: block;
+    border-radius: var(--border-radius-small);
+}
+
+.peterObiCard8 .cardImg img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    /* display: none; */
+    overflow: hidden;
+    border-radius: var(--border-radius-small);
+}
+
+/* name*/
+.peterObiCard8 .name {
+    top: 84% !important;
+    margin-left: 4.4%;
+    font-size: 5vw;
+}
+
+.peterObiCard8 #card.resize .name .hiddenName {
+    display: block;
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    line-height: 48px;
+    height: 48px;
+    font-size: 75.37px;
+    text-transform: uppercase;
+}
+
+
+@media only screen and (min-width:640px) {
+    .peterObiCard8 .name {
+        top: 82% !important;
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width:960px) {
+    .peterObiCard8 .name {
+        top: 82.1% !important;
+        font-size: 1.3vw;
+    }
 }
 
 /* pObi Avatar 10*/
-
-
 #card.resize .name .displayName,
 .name .hiddenName {
     display: none;
@@ -334,14 +441,16 @@
 
 .peterObiCard9 #card.resize .name {
     display: block;
-    top: 883.76px;
+    top: 82.8%;
+    font-size: 65px;
     text-align: center
 }
 
 .peterObiCard9 .name {
-    top: 81.5%;
+    top: 81.1%;
     bottom: 19.5%;
-    font-size: 3vw;
+    font-size: 3.9vw;
+    text-align: center;
 }
 
 @media only screen and (min-width:640px) {
@@ -354,7 +463,7 @@
 
 @media only screen and (min-width:960px) {
     .peterObiCard9 .name {
-        top: 80.95%;
+        top: 80.55%;
         bottom: 19.5%;
     }
 }

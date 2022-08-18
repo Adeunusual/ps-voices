@@ -130,7 +130,7 @@
     position: fixed;
     top: 0;
     background-color: var(--color-gray-100);
-    z-index: 1000;
+    z-index: 10;
 }
 
 #light .navbar-wrapper.fixed {

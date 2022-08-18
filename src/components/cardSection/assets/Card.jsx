@@ -146,14 +146,18 @@ const Card = () => {
                         onClick={() => setPopUpBtn(true)}
                         ref={id === checkCardId ? printRef : null}>
                         <div className="card-details">
-                            <img className='card' src={dataGotten.card} alt="card" />
                             <div className="cardImg">
                                 {id === checkCardId ? <img src={cardImg} alt="" /> : <img src={avatar} alt="uploadedImg" />}
                             </div>
+                            <img className='card' src={dataGotten.card} alt="card" />
+
+                            {/* tiwtter Handle And Name*/}
                             <div className="twitterHandle">
                                 {dataGotten.twitterHandle && <p className="displayName">@abayomi</p>}
                                 {dataGotten.twitterHandle && <p className='hiddenName'>{cardTxtInput.twitterHandle} </p>}
                             </div>
+
+                            {/* Name */}
                             <div className="name">
                                 {dataGotten.name && <p className="displayName">ANITA ADELEKE</p>}
                                 {dataGotten.name && <p className='hiddenName'>{cardTxtInput.name} </p>}
