@@ -346,7 +346,7 @@
 .peterObiCard7 #card.resize .name .hiddenName {
     display: block;
     position: absolute;
-    top: 90%;
+    top: 98%;
     width: 100%;
     line-height: 48px;
     height: 48px;
@@ -364,8 +364,8 @@
 
 @media only screen and (min-width:960px) {
     .peterObiCard7 .name {
-        top: 79.1% !important;
-        font-size: 1.3vw;
+        top: 81.1% !important;
+        font-size: 1vw;
     }
 }
 
@@ -428,8 +428,8 @@
 
 @media only screen and (min-width:960px) {
     .peterObiCard8 .name {
-        top: 82.1% !important;
-        font-size: 1.3vw;
+        top: 83.1% !important;
+        font-size: 1vw;
     }
 }
 
@@ -447,7 +447,7 @@
 }
 
 .peterObiCard9 .name {
-    top: 81.1%;
+    top: 82.1%;
     bottom: 19.5%;
     font-size: 3.9vw;
     text-align: center;
@@ -484,6 +484,20 @@
     height: 280px;
     top: 407px;
     left: 400px;
+}
+
+.peterObiCard11 #card.resize .name {
+    display: block;
+    top: 82.8%;
+    font-size: 65px;
+    text-align: center
+}
+
+.peterObiCard11 .name {
+    top: 79.5%;
+    bottom: 19.5%;
+    /* font-size: 1.9vw; */
+    text-align: center;
 }
 
 /* ------------------------------------------------------ */

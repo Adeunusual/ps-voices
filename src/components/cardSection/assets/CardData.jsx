@@ -116,7 +116,8 @@ export const data = [
         candidateImg: PetrObi,
         candidateName: 'Peter Obi',
         card: obi10,
-        needImg: true
+        needImg: true,
+        name: true
     }
 
 ]
