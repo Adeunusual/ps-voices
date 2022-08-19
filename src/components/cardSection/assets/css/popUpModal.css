@@ -14,6 +14,7 @@
 
     overflow-y: hidden;
     overflow: auto;
+    z-index: 10000000000000;
 }
 
 .popUpInner,
